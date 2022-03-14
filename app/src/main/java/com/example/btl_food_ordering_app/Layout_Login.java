@@ -32,12 +32,12 @@ public class Layout_Login extends AppCompatActivity {
             public void onSwitch(boolean is_night) {
                 if(is_night)
                 {
-                    sun.animate().translationY(70).setDuration(1000);
+                    sun.animate().translationY(30).setDuration(1000);
                     daySky.animate().alpha(0).setDuration(1300);
                 }
                 else
                 {
-                    sun.animate().translationY(-20).setDuration(1000);
+                    sun.animate().translationY(-30).setDuration(1000);
                     daySky.animate().alpha(1).setDuration(1300);
                 }
             }
