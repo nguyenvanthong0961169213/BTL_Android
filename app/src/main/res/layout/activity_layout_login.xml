@@ -170,15 +170,14 @@
             android:layout_height="wrap_content"
             android:text="Don'n have an account?"
             android:textSize="18dp"/>
-        <TextView
-            android:id="@+id/txt_createaccount"
+        <Button
+            android:id="@+id/btn_createaccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/btn_nocolor"
             android:text="Create"
-            android:textSize="20dp"
+            android:textSize="17dp"
             android:textStyle="bold"
             />
     </LinearLayout>
-
-
 </RelativeLayout>

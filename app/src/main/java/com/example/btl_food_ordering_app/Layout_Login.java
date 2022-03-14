@@ -2,9 +2,12 @@ package com.example.btl_food_ordering_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.mahfa.dnswitch.DayNightSwitch;
 import com.mahfa.dnswitch.DayNightSwitchListener;
@@ -14,6 +17,7 @@ public class Layout_Login extends AppCompatActivity {
     ImageView sun;
     View daySky,nightSky;
     DayNightSwitch dayNightSwitch;
+    Button btn_Createaccount;
 
     void Connect_ID()
     {
@@ -21,6 +25,7 @@ public class Layout_Login extends AppCompatActivity {
         daySky=findViewById(R.id.day_BackGround);
         nightSky=findViewById(R.id.night_BackGround);
         dayNightSwitch=findViewById(R.id.day_night_switch);
+        btn_Createaccount=findViewById(R.id.btn_createaccount);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +45,13 @@ public class Layout_Login extends AppCompatActivity {
                     sun.animate().translationY(-30).setDuration(1000);
                     daySky.animate().alpha(1).setDuration(1300);
                 }
+            }
+        });
+        Intent intent_signup = new Intent(this,Layout_SignUp.class);
+        btn_Createaccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intent_signup);
             }
         });
     }
